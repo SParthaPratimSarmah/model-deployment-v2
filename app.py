@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/api/predict", methods=["POST"])
+@app.route("/predict", methods=["POST"])
 def predict():
     email = request.form.get('content')
     prediction =  make_prediction(email)
